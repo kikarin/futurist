@@ -35,6 +35,8 @@ export default function Hero() {
         <img
           src="/bg/Futurist Cyborg_Red.jpg"
           alt=""
+          fetchPriority="high"
+          decoding="async"
           className="size-full object-cover object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.28)_0%,rgba(0,0,0,0.12)_40%,rgba(0,0,0,0.45)_100%),radial-gradient(ellipse_at_center,transparent_35%,rgba(0,0,0,0.35)_100%)]" />
@@ -44,6 +46,8 @@ export default function Hero() {
         <motion.img
           src="/logo/Logo_3.png"
           alt="Futurist"
+          fetchPriority="high"
+          decoding="async"
           className="mb-5 w-[min(280px,82vw)] drop-shadow-[0_8px_32px_rgba(0,0,0,0.35)] sm:mb-8 sm:w-[min(420px,78vw)]"
           initial={{ opacity: 0, scale: 0.92, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

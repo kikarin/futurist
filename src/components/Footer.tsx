@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { legalRoutes } from '../config/site'
 
 export default function Footer() {
   return (
@@ -16,6 +18,8 @@ export default function Footer() {
         <img
           src="/logo/Logo_3.png"
           alt="Futurist"
+          loading="lazy"
+          decoding="async"
           className="mb-4 w-[min(220px,58vw)]"
         />
 
@@ -45,6 +49,18 @@ export default function Footer() {
         <p className="text-[13px] font-medium tracking-wide text-brand-deep">
           Futurist 2026
         </p>
+
+        <nav className="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-2" aria-label="Legal">
+          {legalRoutes.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className="text-[11px] text-white/55 transition-colors hover:text-white/80 sm:text-[12px]"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
       </motion.div>
     </footer>
   )

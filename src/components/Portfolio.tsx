@@ -26,12 +26,14 @@ export default function Portfolio() {
     <section
       id="portfolio"
       className="relative overflow-hidden px-5 py-16 sm:px-8 sm:py-24 lg:px-14 lg:py-[7.5rem]"
-      aria-label="Brand Portfolio"
+      aria-labelledby="portfolio-heading"
     >
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <img
           src="/bg/BG_Red Bawah.jpg"
           alt=""
+          loading="lazy"
+          decoding="async"
           className="size-full object-cover object-center"
         />
         <div className="pointer-events-none absolute inset-0 bg-black/[0.18]" />
@@ -39,6 +41,7 @@ export default function Portfolio() {
 
       <div className="relative z-[1] mx-auto max-w-[1100px]">
         <motion.h2
+          id="portfolio-heading"
           className="mb-8 text-center text-lg font-semibold tracking-wide text-white sm:mb-12 sm:text-xl"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -69,6 +72,8 @@ export default function Portfolio() {
                   <img
                     src={brand.bg}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     className="absolute inset-0 size-full object-cover"
                     aria-hidden="true"
                   />
@@ -78,6 +83,8 @@ export default function Portfolio() {
                       <img
                         src={brand.logo}
                         alt={brand.name}
+                        loading="lazy"
+                        decoding="async"
                         className={`h-auto object-contain ${
                           isLight
                             ? 'w-[min(280px,78%)]'

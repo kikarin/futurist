@@ -22,10 +22,14 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
     >
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
       <a href="#hero" className=" flex items-center" aria-label="Futurist home">
         <img
           src="/logo/Logo_4.png"
           alt="Futurist"
+          decoding="async"
           className="size-9 object-contain sm:size-11"
         />
       </a>
