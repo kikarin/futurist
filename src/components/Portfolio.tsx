@@ -78,41 +78,41 @@ export default function Portfolio() {
                     aria-hidden="true"
                   />
 
-                  <div className="relative z-[1] flex h-full flex-col px-3 pb-4 sm:px-5 sm:pb-5">
-                    <div className="flex flex-1 flex-col items-center justify-center gap-1.5 text-center sm:gap-2">
-                      <img
-                        src={brand.logo}
-                        alt={brand.name}
-                        loading="lazy"
-                        decoding="async"
-                        className={`h-auto object-contain ${
-                          isLight
-                            ? 'w-[min(280px,78%)]'
-                            : 'w-[min(250px,72%)]'
-                        }`}
-                      />
-                      <p
-                        className={`max-w-[280px] text-xs leading-snug font-medium sm:text-sm ${
-                          isLight ? 'text-white/90' : 'text-simsami'
-                        }`}
-                      >
-                        {brand.tagline}
-                      </p>
-                    </div>
-
-                    <a
-                      href={brand.href || undefined}
-                      target={brand.href ? '_blank' : undefined}
-                      rel={brand.href ? 'noopener noreferrer' : undefined}
-                      className={`mx-auto inline-flex h-9 min-w-[100px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-current px-5 text-sm font-semibold tracking-wide transition-colors sm:h-10 sm:min-w-[108px] ${
+                  <div className="relative z-[1] flex h-full flex-col items-center justify-center gap-1.5 px-3 pb-16 text-center sm:gap-2 sm:px-5 sm:pb-[4.5rem]">
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      loading="lazy"
+                      decoding="async"
+                      className={`h-auto object-contain ${
                         isLight
-                          ? 'text-white hover:bg-white hover:text-simsami-dark'
-                          : 'text-simsami hover:bg-simsami hover:text-white'
+                          ? 'w-[min(280px,78%)]'
+                          : 'w-[min(250px,72%)]'
+                      }`}
+                    />
+                    <p
+                      className={`max-w-[280px] text-xs leading-snug font-medium sm:text-sm ${
+                        isLight ? 'text-white/90' : 'text-simsami'
                       }`}
                     >
-                      Visit
-                    </a>
+                      {brand.tagline}
+                    </p>
                   </div>
+                </div>
+
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] flex justify-center px-3 pb-4 sm:px-5 sm:pb-5">
+                  <a
+                    href={brand.href || undefined}
+                    target={brand.href ? '_blank' : undefined}
+                    rel={brand.href ? 'noopener noreferrer' : undefined}
+                    className={`pointer-events-auto inline-flex h-9 min-w-[100px] shrink-0 items-center justify-center rounded-full border-[1.5px] border-current px-5 text-sm font-semibold tracking-wide transition-colors sm:h-10 sm:min-w-[108px] ${
+                      isLight
+                        ? 'text-white hover:bg-white hover:text-simsami-dark'
+                        : 'text-simsami hover:bg-simsami hover:text-white'
+                    }`}
+                  >
+                    Visit
+                  </a>
                 </div>
               </motion.article>
             )

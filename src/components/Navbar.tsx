@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { site } from '../config/site'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -41,7 +42,9 @@ export default function Navbar() {
           Investor Relation
         </a>
         <a
-          href="#connect"
+          href={site.phoneHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex h-9 min-w-24 items-center justify-center rounded-full bg-brand px-4 text-[13px] font-semibold tracking-wide text-white transition hover:-translate-y-px hover:bg-brand-hover sm:h-[42px] sm:min-w-[118px] sm:px-6 sm:text-[15px]"
         >
           Connect
