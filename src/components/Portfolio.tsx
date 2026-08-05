@@ -7,7 +7,7 @@ const brands = [
     tagline: 'Creative Communications',
     logo: '/logo/Logo_white.png',
     bg: '/bg/BG Futurist.jpg',
-    href: 'https://firstpective.vercel.app/',
+    href: 'https://firstpective.co.id/',
     tone: 'light' as const,
   },
   {
